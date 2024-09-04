@@ -3,7 +3,6 @@ let date = new Date();
 let optionsDate = {
   month: "long",
   weekday: "short",
-  // year: "numeric",
   day: "numeric",
 };
 

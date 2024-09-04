@@ -81,7 +81,7 @@ function weatherDailyHandler(jsoneddata) {
       });
     });
 
- // console.log(finalArray); 
+
 
  return finalArray;
 }
@@ -90,7 +90,7 @@ function weatherDailyHandler(jsoneddata) {
 function renderLongtermData(finalArray) {
     
     finalArray.forEach(el => {
-       // console.log(el.date, el.avgTemp)
+       
         longtermOneDayWeatherDiv = document.createElement("div");
         longtermOneDayWeatherDiv.classList.add("longtermOneDayWeatherDiv");
 

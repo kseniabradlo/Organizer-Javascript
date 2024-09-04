@@ -22,8 +22,7 @@ body{
 
 section{
     max-height: 700px;
-                overflow: hidden;
-        /* overflow-y: auto; */
+    overflow: hidden;
 }
 
 #date-todo-section #plan-input-add{
@@ -45,7 +44,6 @@ section{
         margin-top: 2%;
 }
 
-
 #date-todo-section #plan-input-add #input-add #taskValInp:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(153, 127, 223, 0.5);
@@ -55,8 +53,6 @@ section{
      color: rgba(255, 255, 255, 0.5);
      font-size: 14px;
  }
-
-
 
  button{
     background-color: transparent;
@@ -101,13 +97,11 @@ margin: 4% 0;
     border: 1px solid rgba(255, 255, 255, 0.5);
     align-items: center;
     width: 100%;
-    height: 50px;
-  
+    height: 50px; 
 }
 
 .taskLidiv:hover{
-       background-color: rgba(184, 180, 180, 0.5);
-       
+       background-color: rgba(184, 180, 180, 0.5);  
 }
 
 .checkboxtext{
@@ -119,9 +113,7 @@ margin: 4% 0;
 
 .task-text{
     overflow: hidden;
-        /* Приховує текст, який виходить за межі */
         text-overflow: ellipsis;
-        /* Додає три крапки в кінці переповненого тексту */
         white-space: nowrap;
         width: 60%;
 }
@@ -143,27 +135,17 @@ margin: 4% 0;
 }
 
 input[type="checkbox"] {
-    /* Стиль для чекбоксу */
     width: 20px;
     height: 20px;
     accent-color: rgb(110, 62, 110);
     border-radius: 5px;
-    /* Колір галочки в сучасних браузерах */
 }
 
-/* Стилі для чекбоксу у стані відміни */
 input[type="checkbox"]:checked {
     background-color: rgb(110, 62, 110);
-    /* Зміна фону при активності */
     border: 2px solid rgb(110, 62, 110);
     border-radius: 5px;
-    /* Зміна кольору рамки при активності */
 }
-
-
-/*секція перша - дата і туду*/
-
-
 
 section{
     width: 50%;
@@ -171,7 +153,6 @@ section{
     padding: 2%;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
-
 
 #date-div{
     position: relative;
@@ -193,9 +174,6 @@ font-size: 220%;}
     object-fit: contain;
     border-radius: 50px 50px 0 0 ;
 }
-
-
-/* weather */
 
 #weather-section {
     margin: 0 7% 0 7%;
@@ -303,7 +281,6 @@ font-size: 220%;}
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* trzeci widzet */
 #day-night-calendar-section{
     overflow-x: hidden;
 }
@@ -349,8 +326,6 @@ font-size: 220%;}
     color:rgba(255, 255, 255, 0.838) ;
     border-radius: 0;
 }
-
-/* calendar */
 
 #calendar-wrapper{
     border: 1px solid rgba(215, 161, 253, 0.5);    
@@ -482,9 +457,6 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 
 @media(max-width:1100px){
-/* body{
-    overflow: scroll;
-} */
 
 #div-wrapper{
     display: grid;
@@ -609,7 +581,6 @@ section {
     #weather-section {
         height: 700px;
         width: 80%;  
-        /* overflow: scroll; */
             padding: 30% 10%;
     }
     
@@ -647,7 +618,6 @@ section {
 }
 
 #day-night-calendar-section {
-    /* overflow: hidden; */
 margin-bottom: 3%;
 }
 }

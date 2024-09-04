@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓJ ORGANIZER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="div-wrapper">
+
+    <section id="date-todo-section">
+
+        <div id="date-div">
+            <div id="date-now-text">
+                <div id="time"></div>
+                <div id="date"></div>
+            </div>
+            <img src="assets/images/art-wild-flowers-meadow-sunset-600nw-2340689135.webp" alt="spring-blossom">
+        </div>
+
+    <div id="plan-input-add">
+       <div>PLAN</div>
+       <div id="input-add">
+    <input id="taskValInp" type="text" name="tasknameinput" placeholder="nowe zadanie"/>
+    <button id="addTask">+</button>
+       </div>
+    </div>
+
+    <button id="showAll">wszytskie</button>
+    <button id="showNotDone">do wykonania</button>
+
+    <ul id="taskListUl">
+
+    </ul>
+
+    </section>
+
+
+    <section id="weather-section">
+       <div id="weather-wrapper">
+
+        <div id="today-weather-wrapper">
+
+        <div id="icon-name-wrapper">
+            <div id="city"></div>
+            <img id="weatherImg"/>
+        </div>
+
+        <div id="temp"></div>
+        <div id="feels-like"></div>
+
+        </div>
+
+        <div id="check-other-city-div">
+          <input id="input-other-city" type="text" placeholder="inne miasto"/>
+          <button id="check-other-city-btn">OK</button>
+        </div>
+
+
+        <div id="longterm-weather-wrapper"></div>
+
+       </div>
+
+    </section>
+    <section id="day-night-calendar-section">
+        <div id="wrapper">
+        <div id="mode-wrapper">
+            <div id="btns-wrapper">
+            <div id="mode-label">wygląd: </div>
+            <button id="light">jasny</button>
+            <button id="dark">ciemny</button>
+            </div>
+        </div>
+
+        <div id="calendar-wrapper">
+
+            <div id="calendar-box">
+                <div id="calendar-header">
+                    <button id="prev-month"> &lt </button>
+                    <button id="today">dzisiaj</button>
+                    <div id="current-month-year">somemonth</div>
+                    <button id="next-month"> &gt </button>
+                </div>
+                <div id="weekdays-days-box">
+                    <div id="weekedays-header">
+                        <div>Pn</div>
+                        <div>Wt</div>
+                        <div>Śr</div>
+                        <div>Czw</div>
+                        <div>Pt</div>
+                        <div>Sb</div>
+                        <div>Ndz</div>
+                    </div>
+                    <div id="days-box"></div>
+                </div>
+            </div>   
+        </div>
+
+
+        <div id="pomodoro-wrapper">
+            <div id="pomodoro-box">
+                <div id="modes">
+                    <button id="work">praca</button>
+                    <button id="break">przerwa</button>
+                </div>
+                <div id="circle">
+                    <div id="time">
+                        <div id="minutes"></div>
+                        <div> : </div>
+                        <div id="seconds"></div>
+                    </div>
+                    <button id="stop">stop</button>
+                </div>
+                <div id="start-stop-btns">
+                    <button id="start"> <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg> 
+  </a></button>
+                    <button id="restart">od nowa</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+</div>
+
+    <script src="main.js"></script>
+    <script src="date.js"></script>
+    <script src="weather.js"></script>
+    <script src="mode.js"></script>
+    <script src="calendar.js"></script>
+    <script src="pomodoro.js"></script>
+</body>
+</html>

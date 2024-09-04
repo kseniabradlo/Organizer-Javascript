@@ -1,0 +1,653 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Zilla Slab", system-ui;
+    font-weight: 300;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 2%;
+    margin: 0;
+    background: radial-gradient(circle, #c1a5ce, #a18dc2, rgb(130, 36, 231));
+}
+
+#div-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+section{
+    max-height: 700px;
+                overflow: hidden;
+        /* overflow-y: auto; */
+}
+
+#date-todo-section #plan-input-add{
+    display: flex;
+    flex-direction: column;
+}
+
+#date-todo-section #plan-input-add #input-add{
+    display: flex;
+}
+
+#date-todo-section #plan-input-add #input-add #taskValInp{
+    margin-right: 2%;
+    background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        padding: 3%;
+        color: white;
+        margin-top: 2%;
+}
+
+
+#date-todo-section #plan-input-add #input-add #taskValInp:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(153, 127, 223, 0.5);
+}
+
+ #date-todo-section #plan-input-add #input-add #taskValInp::placeholder {
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 14px;
+ }
+
+
+
+ button{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 3%;
+    margin-top: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+ }
+ button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+ }
+
+ #taskListUl{
+    margin: 0;
+    padding: 0;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.taskLi{
+list-style-type: none;
+margin: 4% 0;
+    font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-weight: 1000;
+        font-style: normal;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.taskLidiv{
+    display: flex;
+    justify-content: space-between;
+    padding:0 3% 0 0;
+    background-color: rgb(204, 203, 203, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  
+}
+
+.taskLidiv:hover{
+       background-color: rgba(184, 180, 180, 0.5);
+       
+}
+
+.checkboxtext{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+.task-text{
+    overflow: hidden;
+        /* Приховує текст, який виходить за межі */
+        text-overflow: ellipsis;
+        /* Додає три крапки в кінці переповненого тексту */
+        white-space: nowrap;
+        width: 60%;
+}
+
+.deletebtn{
+  border: none;
+}
+
+.deletebtn:hover{
+  background-color: rgba(81, 79, 83, 0.5);
+}  
+
+.done {
+    background-color: rgba(81, 79, 83, 0.5); 
+}
+
+.donetext {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    /* Стиль для чекбоксу */
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(110, 62, 110);
+    border-radius: 5px;
+    /* Колір галочки в сучасних браузерах */
+}
+
+/* Стилі для чекбоксу у стані відміни */
+input[type="checkbox"]:checked {
+    background-color: rgb(110, 62, 110);
+    /* Зміна фону при активності */
+    border: 2px solid rgb(110, 62, 110);
+    border-radius: 5px;
+    /* Зміна кольору рамки при активності */
+}
+
+
+/*секція перша - дата і туду*/
+
+
+
+section{
+    width: 50%;
+    border-radius: 50px;
+    padding: 2%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+#date-div{
+    position: relative;
+}
+
+#date-div #date-now-text{
+position: absolute;
+padding: 5% 0 0 3%;
+box-sizing: border-box;
+}
+
+#date-div #date-now-text #time{
+font-size: 220%;}
+
+
+#date-div img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 50px 50px 0 0 ;
+}
+
+
+/* weather */
+
+#weather-section {
+    margin: 0 7% 0 7%;
+}
+
+#weather-section #weather-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 4%;
+}
+
+#weather-section #weather-wrapper #icon-name-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#weatherImg{
+    height: 100px;
+    width: 100px;
+}
+
+#weather-section #weather-wrapper #city{
+    font-weight: 1000;
+    font-size: 200%;
+}
+
+#weather-section #weather-wrapper #description {
+    font-size: 150%;
+}
+
+#weather-section #weather-wrapper #temp {
+    font-weight: 1000;
+    font-size: 300%;
+    margin-bottom: 5%;
+    margin-top: -10%;
+}
+
+#weather-section #weather-wrapper #check-other-city-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#weather-section #weather-wrapper #check-other-city-div #input-other-city{
+    margin-right: 2%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 6%;
+    color: white;
+}
+
+#weather-section #weather-wrapper #check-other-city-div #input-other-city:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(153, 127, 223, 0.5);
+}
+
+#weather-section #weather-wrapper #check-other-city-div #input-other-city::placeholder {
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 14px;
+}
+
+#weather-section #weather-wrapper #check-other-city-div #check-other-city-btn{
+    width: 50px;
+    height: 40px;
+    margin-top: 0;
+}
+
+#weather-section #weather-wrapper #check-other-city-div #check-other-city-btn:hover {
+    width: 50px;
+    height: 40px;
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10%;
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper .longtermOneDayWeatherDiv{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    border-radius: 15px;
+    background: radial-gradient(circle, #cda1e1, #a189b9, rgb(155, 146, 224));
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper .longtermOneDayWeatherDiv .tempDiv {
+    font-size: 150%;
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper .longtermOneDayWeatherDiv:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* trzeci widzet */
+#day-night-calendar-section{
+    overflow-x: hidden;
+}
+
+#day-night-calendar-section #wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#day-night-calendar-section #wrapper #mode-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+    padding: 1% 3%;
+    background-color: rgba(184, 180, 180, 0.5);
+}
+
+#day-night-calendar-section #wrapper #mode-wrapper #btns-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+
+#day-night-calendar-section #wrapper #mode-wrapper #btns-wrapper #mode-label{
+    font-size: 90%;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#light{
+    background-color: rgba(255, 255, 255, 0.838);
+    color: rgb(171, 166, 166);
+    border-radius: 0;
+    margin-left: 5%;
+}
+
+#dark{
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgba(255, 255, 255, 0.838) ;
+    border-radius: 0;
+}
+
+/* calendar */
+
+#calendar-wrapper{
+    border: 1px solid rgba(215, 161, 253, 0.5);    
+    display: flex;
+    border-radius: 25%;
+    justify-content: center;
+    padding: 2%;
+    width: 100%;
+    margin-top: 7%;
+    font-size: 90%;
+}
+
+#calendar-wrapper #calendar-box{
+    width: 100%;
+}
+
+#calendar-wrapper #calendar-box #calendar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(215, 161, 253, 0.5);
+    padding: 3%;
+}
+
+#calendar-wrapper #calendar-box #calendar-header button{
+border: none;
+}
+
+#calendar-wrapper #calendar-box #calendar-header #today{
+background-color: rgba(235, 215, 253, 0.5);
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#calendar-wrapper #calendar-box #weekdays-days-box #weekedays-header, #days-box{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    text-align: center;
+}
+
+#pomodoro-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 270px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(56, 22, 87, 0.3);
+    color: rgba(255, 255, 255, 0.838);
+    margin-top: 7%;
+    transition: 0.5s;
+}
+
+#pomodoro-wrapper:hover{
+    transform: scale(1.05);
+}
+
+#pomodoro-wrapper #pomodoro-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;    
+}
+
+#pomodoro-wrapper #pomodoro-box #modes{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    box-shadow: 0px 10px 30px rgba(221, 221, 221, 0.3);
+    border-radius: 15%;
+    width: 60%;
+    padding: 2% 6%;
+}
+
+#pomodoro-wrapper #pomodoro-box #start-stop-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 40%;
+}
+
+#pomodoro-wrapper button{
+    border: none;
+    text-align: center;
+    padding: 3%;
+}
+
+#pomodoro-wrapper #pomodoro-box #circle{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 1px solid rgba(153, 127, 223, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#pomodoro-wrapper #pomodoro-box #circle button{
+    color: rgba(255, 255, 255, 0.3);
+}
+#pomodoro-wrapper #pomodoro-box #circle #time {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 150%;
+    border-bottom: 2px solid rgba(215, 161, 253, 0.5);
+}
+
+#start {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#start svg {
+    transition: 1s;
+    fill: #e3e3e3;
+    opacity: 3;
+}
+
+
+@media(max-width:1100px){
+/* body{
+    overflow: scroll;
+} */
+
+#div-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "block1 block2"
+            "block3 block3";
+    gap: 10px;
+}
+
+section {
+     max-height: 480px;
+}
+
+#date-todo-section{
+    grid-area: block1;
+    width: 80%;
+    margin-left: 15%;
+    } 
+
+#taskListUl {
+    max-height: 130px;
+    }
+    
+#day-night-calendar-section{
+    grid-area: block2;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+#weather-section {
+    grid-area: block3;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3% 0 0 0;
+}
+
+#weather-section #weather-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 2% 1%;
+}
+
+#weather-section #weather-wrapper #today-weather-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 80%;
+    margin: -5% 0 0 0;
+}
+
+#weather-section #weather-wrapper #check-other-city-div{
+    margin: 0 0 0 -5%;
+    width: 20%;  
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0;
+    width: 50%;
+}
+}
+
+@media(max-width:916px){
+    #weather-section #weather-wrapper #check-other-city-div {
+            margin: 4% 0 0 -25%;
+            width: 10%;
+            display: flex;
+            flex-direction: column;
+}
+
+#weather-section #weather-wrapper #check-other-city-div #check-other-city-btn {
+    margin-top: 10%;
+}
+
+#taskListUl {
+    max-height: 170px;
+}
+
+#weather-section #weather-wrapper #longterm-weather-wrapper .longtermOneDayWeatherDiv .tempDiv {
+    font-size: 110%;
+}
+}
+
+
+@media(max-width:693px) {
+    body{
+        overflow: scroll;
+        height: 1400px;
+    }
+
+    #div-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    section {
+        max-height: 600px;
+    }
+    
+    #date-todo-section {
+        margin:0;
+        height: 700px; 
+    }
+    
+    #taskListUl {
+        max-height: 330px;
+    }
+    
+        
+    #weather-section {
+        height: 700px;
+        width: 80%;  
+        /* overflow: scroll; */
+            padding: 30% 10%;
+    }
+    
+   #weather-section #weather-wrapper {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+    
+ #weather-section #weather-wrapper #icon-name-wrapper {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ #weather-section #weather-wrapper #check-other-city-div {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     width: 60%;
+ }
+
+#weather-section #weather-wrapper #check-other-city-div #check-other-city-btn {
+    margin-top: 0;
+}
+    
+#weather-section #weather-wrapper #longterm-weather-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10%;
+}
+
+#day-night-calendar-section {
+    /* overflow: hidden; */
+margin-bottom: 3%;
+}
+}

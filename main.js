@@ -132,7 +132,7 @@ function createNewTask() {
 
   if (indexoftextinarr != -1) {
     confirmation = confirm(
-      "Завдання з такою назвою вже існує, ви точно бажаєте додати?"
+      "Zadanie z taką nazwą już istnieje, czy nadal chcesz dodać?"
     );
     if (!confirmation) {
       taskValInp.value = "";
